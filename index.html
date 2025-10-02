@@ -3,9 +3,116 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>git revert</title>
+    <title>Git Revert — Case Study</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>git revert</h1>
+    <header class="hero">
+      <div class="hero-illustration"></div>
+      <h1>Git Revert — Case Study</h1>
+      <p class="subtitle">Undo commits without rewriting history</p>
+    </header>
+    <main>
+      <!-- Section 2: Layman-Friendly Explanation -->
+      <section class="explanation fade-in">
+        <h2>Layman-Friendly Explanation</h2>
+        <div class="cards">
+          <div class="card">
+            <span class="icon">📝</span>
+            <p>
+              <strong>Analogy:</strong> <br />git revert is like hitting
+              <b>Ctrl+Z</b>, but it makes a new note of your undo instead of
+              erasing history.
+            </p>
+          </div>
+          <div class="card">
+            <span class="icon">🔒</span>
+            <p>
+              <strong>Safe:</strong> <br />It keeps your project history intact
+              for everyone.
+            </p>
+          </div>
+          <div class="card">
+            <span class="icon">🤝</span>
+            <p>
+              <strong>Collaborative:</strong> <br />Preferred for teamwork and
+              open source projects.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Section 3: High-Level Case Study Flow -->
+      <section class="timeline-section fade-in">
+        <h2>Case Study Flow</h2>
+        <div class="timeline">
+          <div class="node">Commit A</div>
+          <div class="arrow">→</div>
+          <div class="node">Commit B</div>
+          <div class="arrow">→</div>
+          <div class="node">Commit C</div>
+          <div class="arrow">→</div>
+          <div class="node oops">Oops! Mistake</div>
+          <div class="arrow">→</div>
+          <div class="node revert">git revert C</div>
+          <div class="arrow">→</div>
+          <div class="node">
+            Commit D<br /><span class="desc">(reverts C, history intact)</span>
+          </div>
+        </div>
+      </section>
+      <!-- Section 4: Technical Details -->
+      <section class="technical fade-in">
+        <h2>Technical Details</h2>
+        <div class="code-blocks">
+          <div class="code-card">
+            <span class="code-title">Revert a specific commit</span>
+            <pre><code>git revert &lt;commit-hash&gt;</code></pre>
+          </div>
+          <div class="code-card">
+            <span class="code-title">Revert the latest commit</span>
+            <pre><code>git revert HEAD</code></pre>
+          </div>
+          <div class="code-card">
+            <span class="code-title">Revert without committing</span>
+            <pre><code>git revert --no-commit &lt;commit&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+      <!-- Section 5: Comparison Cards -->
+      <section class="comparison fade-in">
+        <h2>git revert vs git reset</h2>
+        <div class="comparison-cards">
+          <div class="glass-card">
+            <h3>git revert</h3>
+            <p>
+              Creates a new commit that undoes changes.<br />History is
+              preserved.<br />Safe for teams.
+            </p>
+          </div>
+          <div class="glass-card">
+            <h3>git reset</h3>
+            <p>
+              Removes commits from history.<br />Can rewrite project history.<br />Risky
+              for shared repos.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Section 6: Summary Callout -->
+      <section class="summary-banner">
+        <h2>Git Revert = Safe Undo</h2>
+        <p>
+          Preserves history, creates a new commit, preferred in collaborative
+          workflows.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 RA_ONE 🤖</p>
+    </footer>
   </body>
 </html>
